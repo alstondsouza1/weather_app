@@ -53,6 +53,8 @@ function App() {
   // Question: What happens, if we do not pass useEffect a dependency array while updating state during useEffect?
   // Answer: It will run after every render, causing an infinite loop.
 
+  // Note: dependency in the dependency array, can be a state variable, but it doesn;t have to be. It works with other local variables as well.
+
   useEffect(() => {
     getWeather(location.latitude, location.longitude);
   }, [location]);
